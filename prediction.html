@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hasil Prediksi Wisata</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" type="text/css">
+</head>
+<body>
+    <h1>Hasil Prediksi Wisata</h1>
+
+    <div class="user-input">
+        <h2>User Input:</h2>
+        <table>
+            <tr>
+                <th>Criteria</th>
+                <th>Rating</th>
+            </tr>
+            {% for criterion, rating in user_inputs.items() %}
+                <tr>
+                    <td>{{ criterion|replace('_', ' ')|title }}</td>
+                    <td>{{ rating }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="result-container">
+        <h2>Predicted Rankings:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Destination</th>
+                    <th>Predicted Ranking</th>
+                    <th>Previous Ranking</th>
+                    <th>Improvement Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in rankings %}
+                <tr>
+                    <td>{{ item.place }}</td>
+                    <td>{{ item.ranking }}</td> 
+                    <td>{{ item.previous_ranking }}</td>
+                    <td>
+                        {% if item.previous_ranking %}
+                            {% if item.previous_ranking < item.ranking %}
+                                The ranking has improved from {{ item.previous_ranking }} to {{ item.ranking }}
+                            {% else %}
+                                The ranking has not improved
+                            {% endif %}
+                        {% else %}
+                            No previous ranking found for comparison.
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="average-container">
+        <h2>Average Ranking for Each Destination:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Destination</th>
+                    <th>Average Ranking</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if average_rankings %}
+                    {% for item in average_rankings %}
+                    <tr>
+                        <td>{{ item.place }}</td>
+                        <td>{{ item.average_ranking }}</td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="2">No average ranking data available.</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+</html>

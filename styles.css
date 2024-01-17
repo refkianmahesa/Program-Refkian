@@ -1,0 +1,218 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+form {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.input-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-item {
+    flex-basis: calc(30% - 10px); /* To create two columns with spacing */
+    margin: 10px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    width: 50%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h2 {
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+p {
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.fade-in-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.input-container img {
+    width: 100px; /* Set a fixed width for the images */
+    height: 100px; /* Set a fixed height for the images */
+    border-radius: 5px; /* Rounded corners for the images */
+    margin-right: 10px; /* Add some spacing to the right of the image */
+}
+
+/* Additional styles for the table with animation and elegant font */
+/* styles.css */
+
+/* ... (previous styles) */
+
+/* Additional styles for the table with animation and elegant font */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+    font-family: 'Georgia', 'Times New Roman', serif; /* Elegant font family */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s; /* Smooth background color transition */
+    font-weight: normal; /* Remove bold font for data cells */
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase; /* Convert header text to uppercase */
+}
+
+/* Set fixed widths for each column */
+th:nth-child(1), td:nth-child(1) {
+    width: 15%; /* Adjust the width of the first column as needed */
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 25%; /* Adjust the width of the description column as needed */
+}
+
+th:nth-child(3), td:nth-child(3),
+th:nth-child(4), td:nth-child(4),
+th:nth-child(5), td:nth-child(5),
+th:nth-child(6), td:nth-child(6),
+th:nth-child(7), td:nth-child(7),
+th:nth-child(8), td:nth-child(8) {
+    width: 10%; /* Adjust the width of the other columns as needed */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray for even rows */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+tr:hover {
+    background-color: #e2e2e2; /* Light gray on hover */
+}
+
+/* Additional styles for user input section */
+.form-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.user-input table {
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.user-input th,
+.user-input td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-weight: normal;
+}
+
+.user-input th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.user-input tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.user-input tr:hover {
+    background-color: #e2e2e2;
+}
+.average-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.average-container h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.average-container p {
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediksi Tempat Wisata</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" type="text/css">
+</head>
+<body>
+    <h1>Prediksi Tempat Wisata</h1>
+    
+    <form action="/predict" method="post">
+        <h2>Tugu Rimau</h2>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='tugu_rimau.jpeg') }}" alt="Tugu Rimau" class="fade-in-image">
+        </div>
+        <div class="input-row">
+            {% for label, name in [["Daya Tarik", "daya_tarik"], ["Aksesbilitas", "aksesbilitas"], ["Fasilitas", "fasilitas"], ["Pelayanan", "pelayanan"], ["Kebersihan", "kebersihan"], ["Promosi", "promosi"]] %}
+            <div class="input-item">
+                <label for="{{ name }}">{{ label }} (1-10):</label>
+                <input type="number" name="{{name}}" id="{{name}}" min="0" max="10" step="1" required>
+            </div>
+            {% endfor %}
+        </div>
+
+        <hr>
+        
+        <h2>Tangga 2001</h2>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='tangga_2001.jpg') }}" alt="Pagaralam" class="fade-in-image">
+        </div>
+        <div class="input-row">
+            {% for label, name in [["Daya Tarik", "daya_tarik"], ["Aksesbilitas", "aksesbilitas"], ["Fasilitas", "fasilitas"], ["Pelayanan", "pelayanan"], ["Kebersihan", "kebersihan"], ["Promosi", "promosi"]] %}
+            <div class="input-item">
+                <label for="{{ name }}">{{ label }} (1-10):</label>
+                <input type="number" name="{{name}}" id="{{name}}" min="0" max="10" step="1" required>
+            </div>
+            {% endfor %}
+        </div>
+
+        <hr>
+
+        <h2>Ayek Pacar</h2>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='tangga_2001.jpg') }}" alt="Pagaralam" class="fade-in-image">
+        </div>
+        <div class="input-row">
+            {% for label, name in [["Daya Tarik", "daya_tarik"], ["Aksesbilitas", "aksesbilitas"], ["Fasilitas", "fasilitas"], ["Pelayanan", "pelayanan"], ["Kebersihan", "kebersihan"], ["Promosi", "promosi"]] %}
+            <div class="input-item">
+                <label for="input2_{{ loop.index }}">{{ label }} (1-10):</label>
+                <input type="number" name="{{name}}" id="{{name}}" min="0" max="10" step="1" required>
+            </div>
+            {% endfor %}
+        </div>
+
+        <hr>
+
+        <h2>Oziel Garden</h2>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='oziel_garden.jpeg') }}" alt="Pagaralam" class="fade-in-image">
+        </div>
+        <div class="input-row">
+            {% for label in ["Daya Tarik", "Aksesbilitas", "Fasilitas", "Pelayanan", "Kebersihan", "Promosi"] %}
+            <div class="input-item">
+                <label for="input2_{{ loop.index }}" >{{ label }} (1-10):</label>
+                <input type="number" name="input4_{{ loop.index }}" id="input2_{{ loop.index }}" min="0" max="10" step="1" required>
+            </div>
+            {% endfor %}
+        </div>
+
+        <hr>
+
+        <h2>Green Paradise</h2>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='green_paradise.jpg') }}" alt="Pagaralam" class="fade-in-image">
+        </div>
+        <div class="input-row">
+            {% for label in ["Daya Tarik", "Aksesbilitas", "Fasilitas", "Pelayanan", "Kebersihan", "Promosi"] %}
+            <div class="input-item">
+                <label for="input2_{{ loop.index }}">{{ label }} (1-10):</label>
+                <input type="number" name="input5_{{ loop.index }}" id="input2_{{ loop.index }}" min="0" max="10" step="1" required>
+            </div>
+            {% endfor %}
+        </div>
+
+        <hr>
+
+        <h2>Agrowisata Tanjung Sakti</h2>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='tanjung_sakti.jpg') }}" alt="Pagaralam" class="fade-in-image">
+        </div>
+        <div class="input-row">
+            {% for label in ["Daya Tarik", "Aksesbilitas", "Fasilitas", "Pelayanan", "Kebersihan", "Promosi"] %}
+            <div class="input-item">
+                <label for="input2_{{ loop.index }}">{{ label }} (1-10):</label>
+                <input type="number" name="input6_{{ loop.index }}" id="input2_{{ loop.index }}" min="0" max="10" step="1" required>
+            </div>
+            {% endfor %}
+        </div>
+
+        <hr>
+
+        <h2>Dempo Park</h2>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='dempo_park.jpeg') }}" alt="Pagaralam" class="fade-in-image">
+        </div>
+        <div class="input-row">
+            {% for label in ["Daya Tarik", "Aksesbilitas", "Fasilitas", "Pelayanan", "Kebersihan", "Promosi"] %}
+            <div class="input-item">
+                <label for="input2_{{ loop.index }}">{{ label }} (1-10):</label>
+                <input type="number" name="input7_{{ loop.index }}" id="input2_{{ loop.index }}" min="0" max="10" step="1" required>
+            </div>
+            {% endfor %}
+        </div>
+
+        <hr>
+
+        <h2>Curup 7 Kenangan</h2>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='curup.jpeg') }}" alt="Pagaralam" class="fade-in-image">
+        </div>
+        <div class="input-row">
+            {% for label in ["Daya Tarik", "Aksesbilitas", "Fasilitas", "Pelayanan", "Kebersihan", "Promosi"] %}
+            <div class="input-item">
+                <label for="input2_{{ loop.index }}">{{ label }} (1-10):</label>
+                <input type="number" name="input8_{{ loop.index }}" id="input2_{{ loop.index }}" min="0" max="10" step="1" required>
+            </div>
+            {% endfor %}
+        </div>
+
+        <hr>
+
+        <h2>Kebun Raya Dempo</h2>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='kebun_raya.jpeg') }}" alt="Pagaralam" class="fade-in-image">
+        </div>
+        <div class="input-row">
+            {% for label in ["Daya Tarik", "Aksesbilitas", "Fasilitas", "Pelayanan", "Kebersihan", "Promosi"] %}
+            <div class="input-item">
+                <label for="input2_{{ loop.index }}">{{ label }} (1-10):</label>
+                <input type="number" name="input9_{{ loop.index }}" id="input2_{{ loop.index }}" min="0" max="10" step="1" required>
+            </div>
+            {% endfor %}
+        </div>
+
+        <hr>
+
+        <h2>Kampung 4</h2>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='kampung4.jpeg') }}" alt="Pagaralam" class="fade-in-image">
+        </div>
+        <div class="input-row">
+            {% for label in ["Daya Tarik", "Aksesbilitas", "Fasilitas", "Pelayanan", "Kebersihan", "Promosi"] %}
+            <div class="input-item">
+                <label for="input2_{{ loop.index }}">{{ label }} (1-10):</label>
+                <input type="number" name="input10_{{ loop.index }}" id="input2_{{ loop.index }}" min="0" max="10" step="1" required>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <button type="submit">Prediksi</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediksi Tempat Wisata</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" type="text/css">
+</head>
+<body>
+    <h1>Destinasi Wisata</h1>
+    <form method="post" action="/predict">
+        <table>
+            <tr>
+                <th>Nama Tempat Wisata</th>
+                <th>Gambar</th>
+                <th>Daya Tarik (1-10)</th>
+                <th>Aksesbilitas (1-10)</th>
+                <th>Fasilitas (1-10)</th>
+                <th>Pelayanan (1-10)</th>
+                <th>Kebersihan (1-10)</th>
+                <th>Promosi (1-10)</th>
+            </tr>
+            <tr>
+                <td>Tugu Rimau</td>
+                <td><img src="{{ url_for('static', filename='tugu_rimau.jpg') }}" alt="Tugu Rimau" width="300" height="300"></td>
+                <td><input type="number" name="daya_tarik_tugu_rimau" min="1" max="10"></td>
+                <td><input type="number" name="aksesbilitas_tugu_rimau" min="1" max="10"></td>
+                <td><input type="number" name="fasilitas_tugu_rimau" min="1" max="10"></td>
+                <td><input type="number" name="pelayanan_tugu_rimau" min="1" max="10"></td>
+                <td><input type="number" name="kebersihan_tugu_rimau" min="1" max="10"></td>
+                <td><input type="number" name="promosi_tugu_rimau" min="1" max="10"></td>
+            </tr>
+            <tr>
+                <td>Tangga 2001</td>
+                <td><img src="{{ url_for('static', filename='tangga_2001.jpg') }}" alt="Tangga 2001" width="300px"height="200px"></td>
+                <td><input type="number" name="daya_tarik_tangga_2001" min="1" max="10"></td>
+                <td><input type="number" name="aksesbilitas_tangga_2001" min="1" max="10"></td>
+                <td><input type="number" name="fasilitas_tangga_2001" min="1" max="10"></td>
+                <td><input type="number" name="pelayanan_tangga_2001" min="1" max="10"></td>
+                <td><input type="number" name="kebersihan_tangga_2001" min="1" max="10"></td>
+                <td><input type="number" name="promosi_tangga_2001" min="1" max="10"></td>
+            </tr>
+            <tr>
+                <td>Ayek Pacar</td>
+                <td><img src="{{ url_for('static', filename='ayek_pacar.jpg') }}" alt="Ayek Pacar" width="300px"height="300px"></td>
+                <td><input type="number" name="daya_tarik_ayek_pacar" min="1" max="10"></td>
+                <td><input type="number" name="aksesbilitas_ayek_pacar" min="1" max="10"></td>
+                <td><input type="number" name="fasilitas_ayek_pacar" min="1" max="10"></td>
+                <td><input type="number" name="pelayanan_ayek_pacar" min="1" max="10"></td>
+                <td><input type="number" name="kebersihan_ayek_pacar" min="1" max="10"></td>
+                <td><input type="number" name="promosi_ayek_pacar" min="1" max="10"></td>
+            </tr>
+            <tr>
+                <td>Oziel Garden</td>
+                <td><img src="{{ url_for('static', filename='oziel_garden.jpg') }}" alt="Oziel Garden" width="300px"height="200px"></td>
+                <td><input type="number" name="daya_tarik_oziel_garden" min="1" max="10"></td>
+                <td><input type="number" name="aksesbilitas_oziel_garden" min="1" max="10"></td>
+                <td><input type="number" name="fasilitas_oziel_garden" min="1" max="10"></td>
+                <td><input type="number" name="pelayanan_oziel_garden" min="1" max="10"></td>
+                <td><input type="number" name="kebersihan_oziel_garden" min="1" max="10"></td>
+                <td><input type="number" name="promosi_oziel_garden" min="1" max="10"></td>
+            </tr>
+            <tr>
+                <td>Green Paradise</td>
+                <td><img src="{{ url_for('static', filename='green_paradise.jpg') }}" alt="Green Paradise" width="300px"height="200px"></td>
+                <td><input type="number" name="daya_tarik_green_paradise" min="1" max="10"></td>
+                <td><input type="number" name="aksesbilitas_green_paradise" min="1" max="10"></td>
+                <td><input type="number" name="fasilitas_green_paradise" min="1" max="10"></td>
+                <td><input type="number" name="pelayanan_green_paradise" min="1" max="10"></td>
+                <td><input type="number" name="kebersihan_green_paradise" min="1" max="10"></td>
+                <td><input type="number" name="promosi_green_paradise" min="1" max="10"></td>
+            </tr>
+            <tr>
+                <td>Agrowisata Tanjung Sakti</td>
+                <td><img src="{{ url_for('static', filename='tanjung_sakti1.jpg') }}" alt="Agrowisata Tanjung Sakti" width="300px"height="300px"></td>
+                <td><input type="number" name="daya_tarik_tanjung_sakti" min="1" max="10"></td>
+                <td><input type="number" name="aksesbilitas_tanjung_sakti" min="1" max="10"></td>
+                <td><input type="number" name="fasilitas_tanjung_sakti" min="1" max="10"></td>
+                <td><input type="number" name="pelayanan_tanjung_sakti" min="1" max="10"></td>
+                <td><input type="number" name="kebersihan_tanjung_sakti" min="1" max="10"></td>
+                <td><input type="number" name="promosi_tanjung_sakti" min="1" max="10"></td>
+            </tr>
+            <tr>
+                <td>Dempo Park</td>
+                <td><img src="{{ url_for('static', filename='dempo_park.jpg') }}" alt="Dempo Park" width="300px" height="300px"></td>
+                <td><input type="number" name="daya_tarik_dempo_park" min="1" max="10"></td>
+                <td><input type="number" name="aksesbilitas_dempo_park" min="1" max="10"></td>
+                <td><input type="number" name="fasilitas_dempo_park" min="1" max="10"></td>
+                <td><input type="number" name="pelayanan_dempo_park" min="1" max="10"></td>
+                <td><input type="number" name="kebersihan_dempo_park" min="1" max="10"></td>
+                <td><input type="number" name="promosi_dempo_park" min="1" max="10"></td>
+            </tr>
+            <tr>
+                <td>Curup 7 Kenangan</td>
+                <td><img src="{{ url_for('static', filename='curup.jpg') }}" alt="Curup 7 Kenangan" width="300px"height="300px" ></td>
+                <td><input type="number" name="daya_tarik_curup" min="1" max="10"></td>
+                <td><input type="number" name="aksesbilitas_curup" min="1" max="10"></td>
+                <td><input type="number" name="fasilitas_curup" min="1" max="10"></td>
+                <td><input type="number" name="pelayanan_curup" min="1" max="10"></td>
+                <td><input type="number" name="kebersihan_curup" min="1" max="10"></td>
+                <td><input type="number" name="promosi_curup" min="1" max="10"></td>
+            </tr>
+            <tr>
+                <td>Kebun Raya Dempo</td>
+                <td><img src="{{ url_for('static', filename='kebun_raya.jpg') }}" alt="Kebun Raya Dempo" width="300px" height="300px" ></td>
+                <td><input type="number" name="daya_tarik_kebun_raya" min="1" max="10"></td>
+                <td><input type="number" name="aksesbilitas_kebun_raya" min="1" max="10"></td>
+                <td><input type="number" name="fasilitas_kebun_raya" min="1" max="10"></td>
+                <td><input type="number" name="pelayanan_kebun_raya" min="1" max="10"></td>
+                <td><input type="number" name="kebersihan_kebun_raya" min="1" max="10"></td>
+                <td><input type="number" name="promosi_kebun_raya" min="1" max="10"></td>
+            </tr>
+            <tr>
+                <td>Kampung 4</td>
+                <td><img src="{{ url_for('static', filename='kampung4.jpg') }}" alt="Kampung 4" width="300px" height="300px" ></td>
+                <td><input type="number" name="daya_tarik_kampung4" min="1" max="10"></td>
+                <td><input type="number" name="aksesbilitas_kampung4" min="1" max="10"></td>
+                <td><input type="number" name="fasilitas_kampung4" min="1" max="10"></td>
+                <td><input type="number" name="pelayanan_kampung4" min="1" max="10"></td>
+                <td><input type="number" name="kebersihan_kampung4" min="1" max="10"></td>
+                <td><input type="number" name="promosi_kampung4" min="1" max="10"></td>
+            </tr>
+            <!-- Buat baris serupa untuk tempat wisata lainnya -->
+        </table>
+        <hr>
+        <button type="submit">Prediksi</button>
+    </form>
+</body>
+</html>
